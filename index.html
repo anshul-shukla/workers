@@ -1,0 +1,16 @@
+<html>
+
+  <head></head>
+  <body>
+    <script>
+      var worker = new Worker("worker.js");
+      worker.addEventListener("message",function(e){
+          console.log(e.data);
+      },false);
+
+      worker.postMessage({"name" : "anshul"});
+    </script>
+  </body>
+
+
+</html>
